@@ -103,7 +103,6 @@ class Validation {
       getEleId(divId).innerHTML = "";
       return true;
     }
-    100000;
     getEleId(divId).innerHTML = mess;
     getEleId(divId).style.display = "block";
     return false;
