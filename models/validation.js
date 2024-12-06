@@ -97,12 +97,13 @@ class Validation {
   }
 
   checkSalary(value, divId, mess) {
-    const letter = /^([1-9]{1}[0-9]{5}|1[0-9]{6}|2000000)$/;
+    const letter = /^([1-9]{1}[0-9]{6}|10[0-9]{6}|20000000)$/;
     if (value.match(letter)) {
       getEleId(divId).style.display = "none";
       getEleId(divId).innerHTML = "";
       return true;
     }
+    100000;
     getEleId(divId).innerHTML = mess;
     getEleId(divId).style.display = "block";
     return false;
