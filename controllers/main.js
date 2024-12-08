@@ -30,7 +30,8 @@ const getInfoStaff = () => {
       id,
       "tbTKNV",
       "Vui lòng nhập từ 4 - 6 ký tự và không chứa ký tự đặc biệt"
-    );
+    ) &&
+    validation.checkIdExist(id, "tbTKNV", "Tài khoản đã có", staffList.arr);
 
   // check name
   isValid &=

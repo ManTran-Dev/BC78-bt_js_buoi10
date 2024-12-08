@@ -118,6 +118,26 @@ class Validation {
     getEleId(divId).style.display = "block";
     return false;
   }
+
+  checkIdExist(value, divId, mess, listStaff) {
+    let isExist = false;
+    for (let i = 0; i < listStaff.length; i++) {
+      const staff = listStaff[i];
+      if (staff.id === value) {
+        isExist = true;
+        break;
+      }
+    }
+    if (isExist) {
+      // id tồn tại => không hợp lệ
+      getEleId(divId).innerHTML = mess;
+      getEleId(divId).style.display = "block";
+      return false;
+    }
+    getEleId(divId).style.display = "none";
+    getEleId(divId).innerHTML = "";
+    return true;
+  }
 }
 
 export default Validation;
